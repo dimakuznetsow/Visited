@@ -16,11 +16,11 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "name": "backend",
+  "name": "visited",
   "version": "1.0.0",
   "main": "server.js",
   "keywords": [],
-  "author": "",
+  "author": "Dmitry Kuznetsov",
   "license": "ISC",
-  "description": ""
+  "description": "Visited countries app"
 }
