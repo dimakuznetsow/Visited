@@ -1,0 +1,65 @@
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Graticule,
+  Sphere,
+} from "react-simple-maps";
+
+const geoUrl =
+  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
+
+export default function Map({ setTooltipContent, countries }) {
+  return (
+    <>
+      <div id="map">
+        <ComposableMap className="m-0" width={950} height={500}>
+          <Graticule stroke="#ebe8eb" strokeWidth={0.5} />
+          <Geographies geography={geoUrl}>
+            {({ geographies }) =>
+              geographies.map((geo) => {
+                const d =
+                  countries &&
+                  countries.find((c) => c.name === geo.properties.name);
+                return (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill={d ? "#4BA3E3" : "#f5f4f6"}
+                    stroke="#cdd2d5"
+                    onMouseEnter={() => {
+                      setTooltipContent(`${geo.properties.name}`);
+                    }}
+                    onMouseLeave={() => {
+                      setTooltipContent("");
+                    }}
+                    strokeWidth={0.5}
+                    style={{
+                      default: {
+                        outline: "none",
+                      },
+                      hover: {
+                        outline: "none",
+                      },
+                      pressed: {
+                        outline: "none",
+                      },
+                    }}
+                  />
+                );
+              })
+            }
+          </Geographies>
+          <Sphere stroke="#ebe8eb" strokeWidth={0.5} />
+        </ComposableMap>
+      </div>
+      {/* {selected && (
+        <div className="md:flex items-center justify-center">
+          <div className="bg-white p-3 rounded-lg md:border border-sky-600  max-w-sm mx-auto">
+            {selected}
+          </div>
+        </div>
+      )} */}
+    </>
+  );
+}

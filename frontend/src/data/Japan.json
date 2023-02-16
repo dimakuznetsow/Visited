@@ -1,0 +1,1233 @@
+[
+  {
+    "country": "Country of 🐧 - Antarctica",
+    "id": "ATA",
+    "visaRequirement": "",
+    "allowedStay": ""
+  },
+    {
+      "country": "Afghanistan",
+      "id": "AFG",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Albania",
+      "id": "ALB",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Algeria",
+      "id": "DZA",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Andorra",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Angola",
+      "id": "AGO",
+      "visaRequirement": "eVisa",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "6 months"
+    },
+    {
+      "country": "Argentina",
+      "id": "ARG",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Armenia",
+      "id": "ARM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "180 days"
+    },
+    {
+      "country": "Australia",
+      "id": "AUS",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Austria",
+      "id": "AUT",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Azerbaijan",
+      "id": "AZE",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Bahamas",
+      "id": "BHS",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Bahrain",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "1 month"
+    },
+    {
+      "country": "Bangladesh",
+      "id": "BGD",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Barbados",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "6 months"
+    },
+   {
+      "country": "Belarus",
+      "id": "BLR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days",
+      "capital": "Minsk",
+      "population": 9398861,
+      "languages": ["Russian", "Belorussian"],
+      "currencies":{"code":"BYN","name":"New Belarusian Ruble","symbol":"Br"},
+      "unesco":[{
+        "geographical_coordinates":[
+        53.22278,
+        26.69139
+        ],
+        "name_en":"Architectural, Residential and Cultural Complex of the Radziwill Family at Nesvizh",
+        "short_description_en":"The Architectural, Residential and Cultural Complex of the Radziwill Family at Nesvizh is located in central Belarus. The Radziwill dynasty, who built and kept the ensemble from the 16th century until 1939, gave birth to some of the most important personalities in European history and culture. Due to their efforts, the town of Nesvizh came to exercise great influence in the sciences, arts, crafts and architecture. The complex consists of the residential castle and the mausoleum Church of Corpus Christi with their setting. The castle has ten interconnected buildings, which developed as an architectural whole around a six-sided courtyard. The palaces and church became important prototypes marking the development of architecture throughout Central Europe and Russia.",
+        "category":"Cultural"
+        }]
+    },
+    {
+      "country": "Belgium",
+      "id": "BEL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Belize",
+      "id": "BLZ",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Benin",
+      "id": "BEN",
+      "visaRequirement": "eVisa",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Bhutan",
+      "id": "BTN",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Bolivia",
+      "id": "BOL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "id": "BIH",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Botswana",
+      "id": "BWA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Brazil",
+      "id": "BRA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Brunei",
+      "id": "BRN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "14 days"
+    },
+    {
+      "country": "Bulgaria",
+      "id": "BGR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Burkina Faso",
+      "id": "BFA",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Burundi",
+      "id": "BDI",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "1 month"
+    },
+    {
+      "country": "Cambodia",
+      "id": "KHM",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Cameroon",
+      "id": "CMR",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Canada",
+      "id": "CAN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "6 months"
+    },
+    {
+      "country": "Cape Verde",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Central African Republic",
+      "id": "CAF",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Chad",
+      "id": "TCD",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Chile",
+      "id": "CHL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "China",
+      "id": "CHN",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Colombia",
+      "id": "COL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "180 days"
+    },
+    {
+      "country": "Comoros",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "45 days"
+    },
+    {
+      "country": "Republic of Congo",
+      "id": "COG",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Democratic Republic of the Congo",
+      "id": "COD",
+      "visaRequirement": "eVisa",
+      "allowedStay": "7 days"
+    },
+    {
+      "country": "Costa Rica",
+      "id": "CRI",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Ivory Coast",
+      "id": "CIV",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Croatia",
+      "id": "HRV",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Cuba",
+      "id": "CUB",
+      "visaRequirement": "Visa required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Cyprus",
+      "id": "CYP",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Czech Republic",
+      "id": "CZE",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Denmark",
+      "id": "DNK",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Djibouti",
+      "id": "DJI",
+      "visaRequirement": "eVisa",
+      "allowedStay": "31 days"
+    },
+    {
+      "country": "Dominica",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "6 months"
+    },
+    {
+      "country": "Dominican Republic",
+      "id": "DOM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Ecuador",
+      "id": "ECU",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Egypt",
+      "id": "EGY",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "El Salvador",
+      "id": "SLV",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Equatorial Guinea",
+      "id": "GNQ",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Eritrea",
+      "id": "ERI",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Estonia",
+      "id": "EST",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Eswatini",
+      "id": "SWZ",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Ethiopia",
+      "id": "ETH",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Fiji",
+      "id": "FJI",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "4 months"
+    },
+    {
+      "country": "Finland",
+      "id": "FIN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "France",
+      "id": "FRA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "French Guiana",
+      "id": "GUF",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Gabon",
+      "id": "GAB",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Gambia",
+      "id": "GMB",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Georgia",
+      "id": "GEO",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "1 year"
+    },
+    {
+      "country": "Germany",
+      "id": "DEU",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Ghana",
+      "id": "GHA",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Greece",
+      "id": "GRC",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Greenland",
+      "id": "GRL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Grenada",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Guatemala",
+      "id": "GTM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Guinea",
+      "id": "GIN",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Guinea-Bissau",
+      "id": "GNB",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Guyana",
+      "id": "GUY",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Haiti",
+      "id": "HTI",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Honduras",
+      "id": "HND",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Hungary",
+      "id": "HUN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Iceland",
+      "id": "ISL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "India",
+      "id": "IND",
+      "visaRequirement": "eVisa",
+      "allowedStay": "60 days"
+    },
+    {
+      "country": "Indonesia",
+      "id": "IDN",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Iran",
+      "id": "IRN",
+      "visaRequirement": "eVisa",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Iraq",
+      "id": "IRQ",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "60 days"
+    },
+    {
+      "country": "Ireland",
+      "id": "IRL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Israel",
+      "id": "ISL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Italy",
+      "id": "ITA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Jamaica",
+      "id": "JAM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Japan",
+      "id": "JPN",
+      "visaRequirement": "Selected",
+      "allowedStay": ""
+    },
+    {
+      "country": "Jordan",
+      "id": "JOR",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Kazakhstan",
+      "id": "KAZ",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Kenya",
+      "id": "KEN",
+      "visaRequirement": "eVisa",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Kiribati",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "North Korea",
+      "id": "PRK",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "South Korea",
+      "id": "KOR",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Kosovo",
+      "id": "CS-KM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Kuwait",
+      "id": "KWT",
+      "visaRequirement": "eVisa",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Kyrgyzstan",
+      "id": "KGZ",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "60 days"
+    },
+    {
+      "country": "Laos",
+      "id": "LAO",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "15 days"
+    },
+    {
+      "country": "Latvia",
+      "id": "LVA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Lebanon",
+      "id": "LBN",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "1 month"
+    },
+    {
+      "country": "Lesotho",
+      "id": "LSO",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Liberia",
+      "id": "LBR",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Libya",
+      "id": "LBY",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Liechtenstein",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Lithuania",
+      "id": "LTU",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Luxembourg",
+      "id": "LUX",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Madagascar",
+      "id": "MDG",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Malawi",
+      "id": "MWI",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Malaysia",
+      "id": "MYS",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Maldives",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Mali",
+      "id": "MLI",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Malta",
+      "id": "MLT",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Marshall Islands",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Mauritania",
+      "id": "MRT",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Mauritius",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Mexico",
+      "id": "MEX",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "180 days"
+    },
+    {
+      "country": "Micronesia",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Moldova",
+      "id": "MDA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Monaco",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Mongolia",
+      "id": "MNG",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Montenegro",
+      "id": "MNE",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Morocco",
+      "id": "MAR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Morocco",
+      "id": "ESH",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Mozambique",
+      "id": "MOZ",
+      "visaRequirement": "eVisa",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Myanmar",
+      "id": "MMR",
+      "visaRequirement": "eVisa",
+      "allowedStay": "28 days"
+    },
+    {
+      "country": "Namibia",
+      "id": "NAM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Nauru",
+      "id": "---",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Nepal",
+      "id": "NPL",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Netherlands",
+      "id": "NLD",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "New Caledonia",
+      "id": "NCL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "New Zealand",
+      "id": "NZL",
+      "visaRequirement": "eVisa",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Nicaragua",
+      "id": "NIC",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Niger",
+      "id": "NER",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Nigeria",
+      "id": "NGA",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "North Macedonia",
+      "id": "MKD",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Norway",
+      "id": "NOR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Oman",
+      "id": "OMN",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Pakistan",
+      "id": "PAK",
+      "visaRequirement": "eVisa",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Palau",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Panama",
+      "id": "PAN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Papua New Guinea",
+      "id": "PNG",
+      "visaRequirement": "eVisa",
+      "allowedStay": "60 days"
+    },
+    {
+      "country": "Paraguay",
+      "id": "PRY",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Peru",
+      "id": "PER",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "183 days"
+    },
+    {
+      "country": "Philippines",
+      "id": "PHL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Poland",
+      "id": "POL",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Portugal",
+      "id": "PRT",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Puerto Rico",
+      "id": "PRI",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Qatar",
+      "id": "QAT",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Romania",
+      "id": "ROU",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Russia",
+      "id": "RUS",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Rwanda",
+      "id": "RWA",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Saint Kitts and Nevis",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Saint Lucia",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "6 weeks"
+    },
+    {
+      "country": "Saint Vincent and the Grenadines",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 month"
+    },
+    {
+      "country": "Samoa",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "60 days"
+    },
+    {
+      "country": "San Marino",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "15 days"
+    },
+    {
+      "country": "Saudi Arabia",
+      "id": "SAU",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Senegal",
+      "id": "SEN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Serbia",
+      "id": "SRB",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Seychelles",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Singapore",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Sierra Leone",
+      "id": "SLE",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "1 month"
+    },
+    {
+      "country": "Slovakia",
+      "id": "SVK",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Slovenia",
+      "id": "SVN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Solomon Islands",
+      "id": "SLB",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Somalia",
+      "id": "-99",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Somalia",
+      "id": "SOM",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "South Africa",
+      "id": "ZAF",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "South Sudan",
+      "id": "SSD",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days / 180 days"
+    },
+    {
+      "country": "Spain",
+      "id": "ESP",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Sri Lanka",
+      "id": "LKA",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Sudan",
+      "id": "SDN",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Suriname",
+      "id": "SUR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Sweden",
+      "id": "SWE",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Switzerland",
+      "id": "CHE",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Syria",
+      "id": "SYR",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Taiwan",
+      "id": "TWN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Tajikistan",
+      "id": "TJK",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Tanzania",
+      "id": "TZA",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Thailand",
+      "id": "THA",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Timor-Leste",
+      "id": "TLS",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Togo",
+      "id": "TGO",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "7 days"
+    },
+    {
+      "country": "Tonga",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "31 days"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "id": "TTO",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Tunisia",
+      "id": "TUN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Turkey",
+      "id": "TUR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Turkmenistan",
+      "id": "TKM",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Tuvalu",
+      "id": "---",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "1 month"
+    },
+    {
+      "country": "Uganda",
+      "id": "UGA",
+      "visaRequirement": "eVisa",
+      "allowedStay": "3 months"
+    },
+    {
+      "country": "Ukraine",
+      "id": "UKR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "United Arab Emirates",
+      "id": "ARE",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "United Kingdom",
+      "id": "GBR",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "6 months"
+    },
+    {
+      "country": "United States",
+      "id": "USA",
+      "visaRequirement": "eVisa",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Uruguay",
+      "id": "URY",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Uzbekistan",
+      "id": "UZB",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Vanuatu",
+      "id": "VUT",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "30 days"
+    },
+    {
+      "country": "Vatican",
+      "id": "---",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Venezuela",
+      "id": "VEN",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Vietnam",
+      "id": "VNM",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "15 days"
+    },
+    {
+      "country": "Yemen",
+      "id": "YEM",
+      "visaRequirement": "Visa required",
+      "allowedStay": ""
+    },
+    {
+      "country": "Zambia",
+      "id": "ZMB",
+      "visaRequirement": "Visa not required",
+      "allowedStay": "90 days"
+    },
+    {
+      "country": "Zimbabwe",
+      "id": "ZWE",
+      "visaRequirement": "Visa on arrival",
+      "allowedStay": "3 months"
+    }
+  ]
