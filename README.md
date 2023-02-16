@@ -2,6 +2,25 @@
 
 Visited Countries is a web application that allows users to mark the countries they have visited on a world map. If the user is logged in, they can add and remove countries from their personal map. If not logged in, they can check visa requirements by selecting their country of passport.
 
+## Getting Started
+
+### Prerequisites
+
+To use this application, you will need a web browser and an internet connection.
+
+### Installation
+
+This application is already deployed and no installation is necessary. Simply visit the website at https://xmpl.cm to start using it.
+
+### Test Credentials
+
+If you want to test the application without signing up, you can use the following test credentials:
+
+Email: **test@test.com**
+Password: **Test1234!**
+
+These credentials can be used by anyone to log in to the application and test its functionality.
+
 ## Usage
 
 ### Sign Up
@@ -18,7 +37,7 @@ Once you're logged in, you can add a visited country to your personal map by sel
 
 ### Remove a Visited Country
 
-To remove a visited country from your personal map, find the country in the list of your visited countries. The list is sorted by region, and can be found in a div on the page. Click the "Remove" button next to the country you wish to remove. The country will then be removed from your personal map.
+To remove a visited country from your personal map, find the country in the list of your visited countries. The list is sorted by region, and can be found below the map. Click the "delete" button next to the country you wish to remove. The country will then be removed from your personal map.
 
 ### Check Visa Requirements
 
