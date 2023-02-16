@@ -300,16 +300,6 @@ const VisitedCountries = () => {
 
   return (
     <>
-      {/* {countries && (
-        <div className="text-center mt-5 text-xl">
-          You visited{" "}
-          <strong className="text-sky-500">
-            {countries && countries.length}
-          </strong>{" "}
-          countries!
-        </div>
-      )} */}
-
       <CountryForm content={content} />
 
       <Map setTooltipContent={setContent} countries={countries} />

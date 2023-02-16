@@ -290,7 +290,7 @@ export default function CountryForm() {
         <div className="mb-4">
           <label className="block font-medium mb-2">Country:</label>
           <input
-            className="border rounded py-2 px-4 w-full focus:outline-none focus:shadow-outline"
+            className="border rounded-lg py-2 px-4 w-full focus:outline-none focus:shadow-outline"
             list="countries"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -302,7 +302,7 @@ export default function CountryForm() {
           </datalist>
         </div>
         <button
-          className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded"
+          className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg"
           type="submit"
         >
           Add Country
