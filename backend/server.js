@@ -29,7 +29,7 @@ mongoose
   .then(() => {
     // listen for requests
     app.listen(process.env.PORT, () => {
-      console.log(`listening on port ${process.env.PORT}`.blue);
+      console.log(`listening on port ${process.env.PORT}`.magenta);
     });
   })
   .catch((error) => console.log(error));
