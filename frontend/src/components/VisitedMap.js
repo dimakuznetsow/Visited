@@ -53,13 +53,6 @@ export default function Map({ setTooltipContent, countries }) {
           <Sphere stroke="#ebe8eb" strokeWidth={0.5} />
         </ComposableMap>
       </div>
-      {/* {selected && (
-        <div className="md:flex items-center justify-center">
-          <div className="bg-white p-3 rounded-lg md:border border-sky-600  max-w-sm mx-auto">
-            {selected}
-          </div>
-        </div>
-      )} */}
     </>
   );
 }
