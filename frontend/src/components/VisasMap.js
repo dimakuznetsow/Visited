@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -6,37 +6,40 @@ import {
   Graticule,
   Sphere,
 } from "react-simple-maps";
-
 import VisasDetails from "./VisasDetails";
-
-const MAP_COUNTRY_CODE_TO_DATA = {
-  Israel: require("../data/Israel.json"),
-  Russia: require("../data/Russia.json"),
-  NNN: require("../data/Blank.json"),
-  Germany: require("../data/Germany.json"),
-  Japan: require("../data/Japan.json"),
-  UAE: require("../data/UAE.json"),
-  USA: require("../data/USA.json"),
-};
 
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 export default function Map({ setTooltipContent }) {
-  const [country, setCountry] = useState("NNN");
-  const selectCountry = MAP_COUNTRY_CODE_TO_DATA[country];
+  const [country, setCountry] = useState("Blank");
+  const [selectCountry, setSelectCountry] = useState(null);
 
   const [info, setInfo] = useState(null);
+
+  useEffect(() => {
+    const fetchVisas = async () => {
+      try {
+        const response = await fetch(`/api/visas/${country}`);
+        const data = await response.json();
+        setSelectCountry(data.countries);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchVisas();
+  }, [country]);
 
   return (
     <>
       <div className="flex justify-center">
         <select
-          defaultValue={"NNN"}
+          defaultValue={"Blank"}
           className="border border-sky-500 py-2 px-4 mt-2 rounded-lg"
           onChange={(event) => setCountry(event.target.value)}
         >
-          <option value="NNN" disabled>
+          <option value="Blank" disabled>
             Select country
           </option>
           <option value="Germany">Germany</option>
@@ -48,18 +51,17 @@ export default function Map({ setTooltipContent }) {
         </select>
       </div>
 
-      {country !== "NNN" && (
+      {country !== "Blank" && (
         <div className="flex justify-center mt-2">
           You can visit without visa:{" "}
-          {
+          {selectCountry &&
             selectCountry.filter((entry) =>
               [
                 "Freedom of movement",
                 "Visa not required",
                 "Visa on arrival",
               ].includes(entry.visaRequirement)
-            ).length
-          }{" "}
+            ).length}{" "}
           countries and territories.
         </div>
       )}
@@ -75,7 +77,8 @@ export default function Map({ setTooltipContent }) {
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const d = selectCountry.find((c) => c.id === geo.id);
+                const d =
+                  selectCountry && selectCountry.find((c) => c.id === geo.id);
                 const countryColor = () => {
                   switch (d.visaRequirement) {
                     case "Freedom of movement":
@@ -235,7 +238,9 @@ export default function Map({ setTooltipContent }) {
         </ComposableMap>
       </div>
 
-      <VisasDetails country={country} selectCountry={selectCountry} />
+      {country !== "Blank" && (
+        <VisasDetails country={country} selectCountry={selectCountry} />
+      )}
     </>
   );
 }

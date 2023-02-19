@@ -6,6 +6,7 @@ const colors = require("colors");
 const cors = require("cors");
 
 const countriesRoutes = require("./routes/countries");
+const visasRoutes = require("./routes/visas");
 const userRoutes = require("./routes/user");
 
 // express app
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 // routes
 app.use("/api/countries/", countriesRoutes);
 app.use("/api/user/", userRoutes);
+app.use("/api/visas/", visasRoutes);
 
 // connect to db
 mongoose
