@@ -43,6 +43,7 @@ export default function Map({ setTooltipContent }) {
             Select country
           </option>
           <option value="Germany">Germany</option>
+          <option value="India">India</option>
           <option value="Israel">Israel</option>
           <option value="Japan">Japan</option>
           <option value="Russia">Russia</option>
