@@ -16,7 +16,7 @@ function Signup() {
   return (
     <div className="md:flex items-center justify-center h-screen ">
       <form
-        className="bg-white p-6 rounded-lg md:border border-sky-600 w-full max-w-sm mx-auto"
+        className="bg-white p-6 rounded-lg md:border border-sky-600 dark:border-slate-800 w-full max-w-sm mx-auto"
         onSubmit={handleSubmit}
       >
         <h3 className="text-2xl font-medium">Sign up</h3>
@@ -64,7 +64,7 @@ function Signup() {
         </div>
         <button
           disabled={isLoading}
-          className="w-full bg-sky-500 text-white p-2 rounded-lg hover:bg-sky-600 mt-8"
+          className="w-full bg-sky-500 dark:bg-slate-800 text-white p-2 rounded-lg hover:bg-sky-600 dark:hover:bg-slate-600 mt-8"
         >
           Sign up
         </button>
