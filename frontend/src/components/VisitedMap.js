@@ -1,3 +1,4 @@
+import { useEffect, useState, useContext } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -6,14 +7,28 @@ import {
   Sphere,
 } from "react-simple-maps";
 
+import { DarkModeContext } from "../context/DarkModeContext";
+
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 export default function Map({ setTooltipContent, countries }) {
+  const { isDarkMode } = useContext(DarkModeContext);
+
+  const [fillColor, setFillColor] = useState("");
+
+  useEffect(() => {
+    if (isDarkMode) {
+      setFillColor("#1e293b");
+    } else {
+      setFillColor("#4ba3e3");
+    }
+  }, [isDarkMode]);
+
   return (
     <>
-      <div id="map">
-        <ComposableMap className="m-0" width={950} height={500}>
+      <div id="map" className="">
+        <ComposableMap className="" width={950} height={500}>
           <Graticule stroke="#ebe8eb" strokeWidth={0.5} />
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -25,7 +40,7 @@ export default function Map({ setTooltipContent, countries }) {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill={d ? "#4BA3E3" : "#f5f4f6"}
+                    fill={d ? fillColor : "#f5f4f6"}
                     stroke="#cdd2d5"
                     onMouseEnter={() => {
                       setTooltipContent(`${geo.properties.name}`);

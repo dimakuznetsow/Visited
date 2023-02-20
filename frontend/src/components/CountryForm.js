@@ -302,7 +302,7 @@ export default function CountryForm() {
           </datalist>
         </div>
         <button
-          className="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg"
+          className="bg-sky-500 dark:bg-slate-800 hover:bg-sky-600 dark:hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg"
           type="submit"
         >
           Add Country

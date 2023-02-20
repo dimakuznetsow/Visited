@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
+import { DarkModeContext } from "./context/DarkModeContext";
 
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
