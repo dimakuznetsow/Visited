@@ -14,7 +14,7 @@ function VisasDetails({
   return (
     <>
       {country !== "NNN" && (
-        <div className="md:flex flex-col border border-sky-500 mx-4 mb-4 rounded-lg">
+        <div className="md:flex flex-col border border-sky-500 dark:border-slate-800 mx-4 mb-4 rounded-lg">
           <section className="p-4 border-b border-gray-200">
             <button
               onClick={() => {
