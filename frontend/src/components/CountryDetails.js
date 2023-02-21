@@ -1,5 +1,6 @@
 import { useCountriesContext } from "../hooks/useCountriesContext";
 import { useAuthContext } from "../hooks/useAuthContext";
+import { TiDelete } from "react-icons/ti";
 
 const CountryDetails = ({ country }) => {
   const { dispatch } = useCountriesContext();
@@ -26,10 +27,10 @@ const CountryDetails = ({ country }) => {
   return (
     <div className="p-2 flex">
       <button
-        className="mr-4 bg-red-500 text-white rounded-full px-2 py-0.5"
+        className="mr-4 bg-red-500 text-white rounded-full px-1 py-0.5"
         onClick={handleClick}
       >
-        delete
+        <TiDelete />
       </button>
       <h4>{country.name}</h4>
     </div>
