@@ -49,6 +49,7 @@ If you want to check visa requirements for a particular country, you can select 
 - React Simple Maps - A set of React components for building SVG maps
 - Node.js - The JavaScript runtime
 - Express - The web application framework for Node.js
+- Tailwind CSS - A utility-first CSS framework for rapid UI development.
 
 ## Authors
 

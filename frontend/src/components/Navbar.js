@@ -116,17 +116,13 @@ export default function Navbar() {
             <>
               <div className="flex items-center">
                 <Link
-                  className="text-xl text-white font-medium"
+                  className="text-xl text-white"
                   onClick={openMenu}
                   to="/check-for-visa"
                 >
                   {pathname === "/" ? <h1>Visa requirements</h1> : null}
                 </Link>
-                <Link
-                  className="text-xl text-white font-medium"
-                  onClick={openMenu}
-                  to="/"
-                >
+                <Link className="text-xl text-white" onClick={openMenu} to="/">
                   {pathname === "/check-for-visa" ? (
                     <h1>Visited countries</h1>
                   ) : null}
