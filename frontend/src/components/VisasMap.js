@@ -42,7 +42,6 @@ export default function Map({ setTooltipContent }) {
           <option value="Blank" disabled>
             Select country
           </option>
-
           <option value="Afghanistan">Afghanistan</option>
           <option value="Albania">Albania</option>
           <option value="Algeria">Algeria</option>
@@ -313,7 +312,9 @@ export default function Map({ setTooltipContent }) {
                           return (
                             <p>
                               <strong className="text-lg">Country: </strong>
-                              <span className="text-lg">{d.country} </span>
+                              <span className="text-lg">
+                                {d.country && d.country}{" "}
+                              </span>
                               <br />
                               <em>
                                 <strong>
@@ -353,6 +354,23 @@ export default function Map({ setTooltipContent }) {
                       }}
                       onClick={() => {
                         const infoContent = () => {
+                          if (!d.unesco || d.unesco.length === 0) {
+                            return (
+                              <>
+                                <div className="text-sky-500 font-bold">
+                                  <button
+                                    onClick={() => setInfo(null)}
+                                    className="bg-white rounded-lg py-1 px-3"
+                                  >
+                                    x
+                                  </button>
+                                </div>
+                                <div className="m-10 text-center text-3xl font-bold">
+                                  No data
+                                </div>
+                              </>
+                            );
+                          }
                           return (
                             <>
                               {d.unesco && (
