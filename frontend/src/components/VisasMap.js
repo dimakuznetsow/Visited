@@ -248,7 +248,7 @@ export default function Map({ setTooltipContent }) {
         </select>
       </div>
 
-      {country !== "Blank" && (
+      {country !== "Blank" && selectCountry && (
         <div className="flex justify-center mt-2">
           You can visit without visa:{" "}
           {selectCountry &&
@@ -339,11 +339,11 @@ export default function Map({ setTooltipContent }) {
                               <br />
                               {d.allowedStay && <strong>Allowed stay: </strong>}
                               {d.allowedStay}
-                              <br />
+                              {/* <br />
                               <br />
                               <strong className="text-sky-500">
                                 Click for more info
-                              </strong>
+                              </strong> */}
                             </p>
                           );
                         };
@@ -352,87 +352,87 @@ export default function Map({ setTooltipContent }) {
                       onMouseLeave={() => {
                         setTooltipContent("");
                       }}
-                      onClick={() => {
-                        const infoContent = () => {
-                          if (!d.unesco || d.unesco.length === 0) {
-                            return (
-                              <>
-                                <div className="text-sky-500 font-bold">
-                                  <button
-                                    onClick={() => setInfo(null)}
-                                    className="bg-white rounded-lg py-1 px-3"
-                                  >
-                                    x
-                                  </button>
-                                </div>
-                                <div className="m-10 text-center text-3xl font-bold">
-                                  No data
-                                </div>
-                              </>
-                            );
-                          }
-                          return (
-                            <>
-                              {d.unesco && (
-                                <>
-                                  <div className="absolute top-5 right-5 text-sky-500 font-bold">
-                                    <button
-                                      onClick={() => setInfo(null)}
-                                      className="bg-white rounded-lg py-1 px-3"
-                                    >
-                                      x
-                                    </button>
-                                  </div>
-                                  <div className="text-center text-3xl font-bold">
-                                    {d.country}
-                                  </div>
-                                  <div>
-                                    <p className="">Capital: {d.capital}</p>
-                                    <p className="">
-                                      Population:{" "}
-                                      {d.population.toLocaleString("il-IL")}
-                                    </p>
-                                    <p>
-                                      Languages:{" "}
-                                      {d.languages.map((language, index) => {
-                                        return (
-                                          <>
-                                            <span>{language}</span>
-                                            {index !== d.languages.length - 1
-                                              ? ", "
-                                              : ""}
-                                          </>
-                                        );
-                                      })}
-                                    </p>
-                                    <p className="">
-                                      Currencies: {d.currencies.name},{" "}
-                                      {d.currencies.code}
-                                    </p>
-                                  </div>
-                                  <div className="flex ">
-                                    {d.unesco &&
-                                      d.unesco.map((site, index) => (
-                                        <section
-                                          key={index}
-                                          className="border-4 border-white my-4 mx-2 rounded-lg p-4"
-                                        >
-                                          <br />
-                                          <p className="font-bold">
-                                            {site.name_en}
-                                          </p>
-                                          <br />
-                                          {site.short_description_en}
-                                        </section>
-                                      ))}
-                                  </div>
-                                </>
-                              )}
-                            </>
-                          );
-                        };
-                        setInfo(infoContent);
-                      }}
+                      // onClick={() => {
+                      //   const infoContent = () => {
+                      //     if (!d.unesco || d.unesco.length === 0) {
+                      //       return (
+                      //         <>
+                      //           <div className="text-sky-500 font-bold">
+                      //             <button
+                      //               onClick={() => setInfo(null)}
+                      //               className="bg-white rounded-lg py-1 px-3"
+                      //             >
+                      //               x
+                      //             </button>
+                      //           </div>
+                      //           <div className="m-10 text-center text-3xl font-bold">
+                      //             No data
+                      //           </div>
+                      //         </>
+                      //       );
+                      //     }
+                      //     return (
+                      //       <>
+                      //         {d.unesco && (
+                      //           <>
+                      //             <div className="absolute top-5 right-5 text-sky-500 font-bold">
+                      //               <button
+                      //                 onClick={() => setInfo(null)}
+                      //                 className="bg-white rounded-lg py-1 px-3"
+                      //               >
+                      //                 x
+                      //               </button>
+                      //             </div>
+                      //             <div className="text-center text-3xl font-bold">
+                      //               {d.country}
+                      //             </div>
+                      //             <div>
+                      //               <p className="">Capital: {d.capital}</p>
+                      //               <p className="">
+                      //                 Population:{" "}
+                      //                 {d.population.toLocaleString("il-IL")}
+                      //               </p>
+                      //               <p>
+                      //                 Languages:{" "}
+                      //                 {d.languages.map((language, index) => {
+                      //                   return (
+                      //                     <>
+                      //                       <span>{language}</span>
+                      //                       {index !== d.languages.length - 1
+                      //                         ? ", "
+                      //                         : ""}
+                      //                     </>
+                      //                   );
+                      //                 })}
+                      //               </p>
+                      //               <p className="">
+                      //                 Currencies: {d.currencies.name},{" "}
+                      //                 {d.currencies.code}
+                      //               </p>
+                      //             </div>
+                      //             <div className="flex ">
+                      //               {d.unesco &&
+                      //                 d.unesco.map((site, index) => (
+                      //                   <section
+                      //                     key={index}
+                      //                     className="border-4 border-white my-4 mx-2 rounded-lg p-4"
+                      //                   >
+                      //                     <br />
+                      //                     <p className="font-bold">
+                      //                       {site.name_en}
+                      //                     </p>
+                      //                     <br />
+                      //                     {site.short_description_en}
+                      //                   </section>
+                      //                 ))}
+                      //             </div>
+                      //           </>
+                      //         )}
+                      //       </>
+                      //     );
+                      //   };
+                      //   setInfo(infoContent);
+                      // }}
                       strokeWidth={0.5}
                       style={{
                         default: {
