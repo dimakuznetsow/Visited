@@ -339,7 +339,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -371,7 +371,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -402,7 +402,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -433,7 +433,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -464,7 +464,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -495,7 +495,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -526,7 +526,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -557,7 +557,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -588,7 +588,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
@@ -620,7 +620,7 @@ const VisitedCountries = () => {
                 .map((country) => (
                   <div
                     key={country._id}
-                    className="md:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
+                    className="lg:w-1/4 mx-2 md:mx-4 my-2 border border-sky-500 dark:border-slate-600 rounded-lg py-2"
                   >
                     <CountryDetails key={country._id} country={country} />
                   </div>
