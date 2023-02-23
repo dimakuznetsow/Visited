@@ -10,7 +10,7 @@ To use this application, you will need a web browser and an internet connection.
 
 ### Installation
 
-This application is already deployed and no installation is necessary. Simply visit the website at https://xmpl.cm to start using it.
+This application is already deployed and no installation is necessary. Simply visit the website at https://visited.onrender.com/ to start using it.
 
 ### Test Credentials
 
