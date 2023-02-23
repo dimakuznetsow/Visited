@@ -1,0 +1,8 @@
+services:
+  - name: frontend
+    buildCommand: npm run build
+    startCommand: serve -s build
+
+routes:
+  - path: /
+    destination: frontend
