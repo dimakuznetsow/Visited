@@ -14,11 +14,7 @@ const app = express();
 
 // middleware
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://visited.onrender.com", "http://localhost:3000/"],
-  })
-);
+app.use(cors());
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();

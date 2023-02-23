@@ -1,0 +1,5 @@
+{
+    "origin": ["https://visited.onrender.com"],
+    "methods": ["GET", "POST", "DELETE"],
+    "allowedHeaders": ["Content-Type", "Authorization"]
+  }
