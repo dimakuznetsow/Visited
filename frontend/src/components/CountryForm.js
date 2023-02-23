@@ -261,17 +261,14 @@ export default function CountryForm() {
       name,
     };
 
-    const response = await fetch(
-      "https://visited-api.onrender.com/api/countries",
-      {
-        method: "POST",
-        body: JSON.stringify(country),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-      }
-    );
+    const response = await fetch("/api/countries", {
+      method: "POST",
+      body: JSON.stringify(country),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
+      },
+    });
     const json = await response.json();
 
     if (!response.ok) {
