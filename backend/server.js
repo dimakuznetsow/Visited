@@ -21,9 +21,9 @@ app.use((req, res, next) => {
 });
 
 // routes
-app.use("/api/countries/", countriesRoutes);
-app.use("/api/user/", userRoutes);
-app.use("/api/visas/", visasRoutes);
+app.use("https://visited-api.onrender.com/api/countries/", countriesRoutes);
+app.use("https://visited-api.onrender.com/api/user/", userRoutes);
+app.use("https://visited-api.onrender.com/api/visas/", visasRoutes);
 
 // connect to db
 mongoose
