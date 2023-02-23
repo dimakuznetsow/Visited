@@ -11,12 +11,15 @@ const CountryDetails = ({ country }) => {
       return;
     }
 
-    const response = await fetch("/api/countries/" + country._id, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      "https://visited-api.onrender.com/api/countries/" + country._id,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
     const json = await response.json();
 
     if (response.ok) {

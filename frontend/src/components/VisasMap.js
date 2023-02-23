@@ -20,7 +20,9 @@ export default function Map({ setTooltipContent }) {
   useEffect(() => {
     const fetchVisas = async () => {
       try {
-        const response = await fetch(`/api/visas/${country}`);
+        const response = await fetch(
+          `https://visited-api.onrender.com/api/visas/${country}`
+        );
         const data = await response.json();
         setSelectCountry(data.countries);
       } catch (error) {
