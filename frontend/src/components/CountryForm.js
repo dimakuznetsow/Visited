@@ -216,12 +216,9 @@ export default function CountryForm() {
 
   useEffect(() => {
     const fetchCountries = async () => {
-      const response = await fetch(
-        "https://visited-api.onrender.com/api/countries",
-        {
-          headers: { Authorization: `Bearer ${user.token}` },
-        }
-      );
+      const response = await fetch("visited-api.onrender.com/api/countries", {
+        headers: { Authorization: `Bearer ${user.token}` },
+      });
       const json = await response.json();
 
       if (response.ok) {
