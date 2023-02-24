@@ -253,7 +253,7 @@ export default function CountryForm() {
     }
 
     if (!filteredCountries.includes(name)) {
-      setError("Please select a valid country from the list.");
+      setError("Please select a country from the list.");
       return;
     }
 
