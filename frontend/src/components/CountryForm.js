@@ -216,9 +216,12 @@ export default function CountryForm() {
 
   useEffect(() => {
     const fetchCountries = async () => {
-      const response = await fetch("visited-api.onrender.com/api/countries", {
-        headers: { Authorization: `Bearer ${user.token}` },
-      });
+      const response = await fetch(
+        "http://visited-api.onrender.com/api/countries",
+        {
+          headers: { Authorization: `Bearer ${user.token}` },
+        }
+      );
       const json = await response.json();
 
       if (response.ok) {
@@ -258,14 +261,17 @@ export default function CountryForm() {
       name,
     };
 
-    const response = await fetch("visited-api.onrender.com/api/countries", {
-      method: "POST",
-      body: JSON.stringify(country),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      "http://visited-api.onrender.com/api/countries",
+      {
+        method: "POST",
+        body: JSON.stringify(country),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
     const json = await response.json();
 
     if (!response.ok) {

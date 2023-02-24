@@ -12,7 +12,7 @@ const CountryDetails = ({ country }) => {
     }
 
     const response = await fetch(
-      "visited-api.onrender.com/api/countries/" + country._id,
+      "http://visited-api.onrender.com/api/countries/" + country._id,
       {
         method: "DELETE",
         headers: {
