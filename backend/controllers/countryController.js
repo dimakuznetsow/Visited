@@ -11,14 +11,13 @@ const getAllCountries = async (req, res) => {
 
 // add a country
 const addCountry = async (req, res) => {
-  const { name, id } = req.body;
+  const { name } = req.body;
 
   try {
     const user_id = req.user._id;
 
     const country = await Country.create({
       name,
-      id,
       user_id,
     });
     res.status(200).json(country);
