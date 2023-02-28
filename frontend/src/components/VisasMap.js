@@ -270,7 +270,6 @@ export default function Map({ setTooltipContent }) {
         <div className="flex justify-center">
           <Barloader
             className="mt-2"
-            color="#17bd5f"
             loading={loading}
             height={3}
             aria-label="Loading Spinner"

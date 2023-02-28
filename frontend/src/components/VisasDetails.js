@@ -49,8 +49,15 @@ function VisasDetails({
                                 country.visaRequirement
                               )
                             )
+                            .reduce((acc, curr) => {
+                              // add only one country to 'map' if there is more than one in 'selectCountry'
+                              if (!acc.includes(curr.country)) {
+                                acc.push(curr.country);
+                              }
+                              return acc;
+                            }, [])
                             .map((country, index) => (
-                              <div key={index + 1}>{country.country}</div>
+                              <div key={index + 1}>{country}</div>
                             ))}
                         </div>
                       </div>
@@ -68,9 +75,15 @@ function VisasDetails({
                             country.visaRequirement
                           )
                         )
+                        .reduce((acc, curr) => {
+                          if (!acc.includes(curr.country)) {
+                            acc.push(curr.country);
+                          }
+                          return acc;
+                        }, [])
                         .map((country, index) => (
-                          <div key={index + 1}>{country.country}</div>
-                        ))}{" "}
+                          <div key={index + 1}>{country}</div>
+                        ))}
                     </div>
                   </div>
                   <div className="p-4 ">
@@ -82,9 +95,15 @@ function VisasDetails({
                         .filter((country) =>
                           ["eVisa"].includes(country.visaRequirement)
                         )
+                        .reduce((acc, curr) => {
+                          if (!acc.includes(curr.country)) {
+                            acc.push(curr.country);
+                          }
+                          return acc;
+                        }, [])
                         .map((country, index) => (
-                          <div key={index + 1}>{country.country}</div>
-                        ))}{" "}
+                          <div key={index + 1}>{country}</div>
+                        ))}
                     </div>
                   </div>
                   <div className="p-4">
@@ -96,9 +115,15 @@ function VisasDetails({
                         .filter((country) =>
                           ["Visa required"].includes(country.visaRequirement)
                         )
+                        .reduce((acc, curr) => {
+                          if (!acc.includes(curr.country)) {
+                            acc.push(curr.country);
+                          }
+                          return acc;
+                        }, [])
                         .map((country, index) => (
-                          <div key={index + 1}>{country.country}</div>
-                        ))}{" "}
+                          <div key={index + 1}>{country}</div>
+                        ))}
                     </div>
                   </div>
                   <div className="p-4">
@@ -116,8 +141,42 @@ function VisasDetails({
                                 country.visaRequirement
                               )
                             )
+                            .reduce((acc, curr) => {
+                              if (!acc.includes(curr.country)) {
+                                acc.push(curr.country);
+                              }
+                              return acc;
+                            }, [])
                             .map((country, index) => (
-                              <div key={index + 1}>{country.country}</div>
+                              <div key={index + 1}>{country}</div>
+                            ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-4">
+                    {selectCountry.filter((country) =>
+                      ["Travel restricted"].includes(country.visaRequirement)
+                    ).length === 0 ? null : (
+                      <div>
+                        <div className="mb-2 text-white bg-black p-2 rounded-lg">
+                          Travel restricted
+                        </div>
+                        <div className="flex-column">
+                          {selectCountry
+                            .filter((country) =>
+                              ["Travel restricted"].includes(
+                                country.visaRequirement
+                              )
+                            )
+                            .reduce((acc, curr) => {
+                              if (!acc.includes(curr.country)) {
+                                acc.push(curr.country);
+                              }
+                              return acc;
+                            }, [])
+                            .map((country, index) => (
+                              <div key={index + 1}>{country}</div>
                             ))}
                         </div>
                       </div>
