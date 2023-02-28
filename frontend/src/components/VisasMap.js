@@ -6,6 +6,7 @@ import {
   Graticule,
   Sphere,
 } from "react-simple-maps";
+import Barloader from "react-spinners/BarLoader";
 import VisasDetails from "./VisasDetails";
 
 const geoUrl =
@@ -16,6 +17,7 @@ export default function Map({ setTooltipContent }) {
   const [selectCountry, setSelectCountry] = useState(null);
 
   const [info, setInfo] = useState(null);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchVisas = async () => {
@@ -25,6 +27,7 @@ export default function Map({ setTooltipContent }) {
         );
         const data = await response.json();
         setSelectCountry(data.countries);
+        setLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -250,7 +253,7 @@ export default function Map({ setTooltipContent }) {
         </select>
       </div>
 
-      {country !== "Blank" && selectCountry && (
+      {country !== "Blank" && selectCountry ? (
         <div className="flex justify-center mt-2">
           You can visit without visa:{" "}
           {selectCountry &&
@@ -262,6 +265,17 @@ export default function Map({ setTooltipContent }) {
               ].includes(entry.visaRequirement)
             ).length}{" "}
           countries and territories.
+        </div>
+      ) : (
+        <div className="flex justify-center">
+          <Barloader
+            className="mt-2"
+            color="#17bd5f"
+            loading={loading}
+            height={3}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
         </div>
       )}
 
