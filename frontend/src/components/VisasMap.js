@@ -41,6 +41,7 @@ export default function Map({ setTooltipContent }) {
       <div className="flex justify-center">
         <select
           defaultValue={"Blank"}
+          disabled={!selectCountry}
           className="border border-sky-500 dark:border-slate-600 py-2 px-4 mt-2 rounded-lg"
           onChange={(event) => setCountry(event.target.value)}
         >
