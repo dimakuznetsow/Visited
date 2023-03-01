@@ -22,15 +22,17 @@ export default function Map({ setTooltipContent }) {
   useEffect(() => {
     const fetchVisas = async () => {
       try {
+        setLoading(true);
         const response = await fetch(
           `https://visited-api.onrender.com/api/visas/${country}`
         );
         const data = await response.json();
         setSelectCountry(data.countries);
-        setLoading(false);
       } catch (error) {
         console.error(error);
       }
+
+      setLoading(false);
     };
 
     fetchVisas();
@@ -254,7 +256,7 @@ export default function Map({ setTooltipContent }) {
         </select>
       </div>
 
-      {country !== "Blank" && selectCountry ? (
+      {/* {country !== "Blank" && selectCountry ? (
         <div className="flex justify-center mt-2">
           You can visit without visa:{" "}
           {selectCountry &&
@@ -277,6 +279,42 @@ export default function Map({ setTooltipContent }) {
             data-testid="loader"
           />
         </div>
+      )} */}
+
+      {loading ? (
+        <div className="flex justify-center">
+          <Barloader
+            className="mt-2"
+            loading={loading}
+            height={3}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      ) : (
+        <>
+          {selectCountry &&
+            selectCountry.filter((entry) =>
+              [
+                "Freedom of movement",
+                "Visa not required",
+                "Visa on arrival",
+              ].includes(entry.visaRequirement)
+            ).length > 0 && (
+              <div className="flex justify-center mt-2">
+                You can visit without visa:{" "}
+                {selectCountry &&
+                  selectCountry.filter((entry) =>
+                    [
+                      "Freedom of movement",
+                      "Visa not required",
+                      "Visa on arrival",
+                    ].includes(entry.visaRequirement)
+                  ).length}{" "}
+                countries and territories.
+              </div>
+            )}
+        </>
       )}
 
       {info && (
