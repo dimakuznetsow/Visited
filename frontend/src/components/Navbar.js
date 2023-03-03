@@ -83,31 +83,28 @@ export default function Navbar() {
 
             {!user && (
               <div className="hidden md:block">
-                {" "}
-                <Link
-                  className="px-2 py-1 mx-2 text-white hover:bg-sky-600 dark:hover:bg-slate-600 rounded-md"
-                  to="/login"
-                >
-                  Log in
-                </Link>
-                <Link
-                  className="px-2 py-1 mx-2 text-white hover:bg-sky-600 dark:hover:bg-slate-600 rounded-md"
-                  to="/signup"
-                >
-                  Sign up
-                </Link>
+                {pathname !== "/login" && pathname !== "/signup" && (
+                  <Link
+                    className="text-white rounded-md pr-2"
+                    to={pathname === "/login" ? "/signup" : "/login"}
+                  >
+                    {pathname === "/login" ? "Sign Up" : "Log In"}
+                  </Link>
+                )}
               </div>
             )}
           </nav>
 
-          <button className="md:hidden" onClick={openMenu}>
-            <svg
-              className="h-6 w-6 fill-current text-white"
-              viewBox="0 0 24 24"
-            >
-              <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-            </svg>
-          </button>
+          {pathname !== "/login" && pathname !== "/signup" && (
+            <button className="md:hidden" onClick={openMenu}>
+              <svg
+                className="h-6 w-6 fill-current text-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+              </svg>
+            </button>
+          )}
         </div>
       </header>
       {isOpen && (
@@ -142,21 +139,15 @@ export default function Navbar() {
           )}
           {!user && (
             <div className="flex justify-end items-center w-full">
-              {" "}
-              <Link
-                className="mr-4 text-white hover:bg-sky-600 dark:hover:bg-slate-600 "
-                onClick={openMenu}
-                to="/login"
-              >
-                Log in
-              </Link>
-              <Link
-                className="text-white hover:bg-sky-600 dark:hover:bg-slate-600 "
-                onClick={openMenu}
-                to="/signup"
-              >
-                Sign up
-              </Link>
+              {pathname !== "/login" && pathname !== "/signup" && (
+                <Link
+                  className="text-white rounded-md pr-2"
+                  to={pathname === "/login" ? "/signup" : "/login"}
+                  onClick={openMenu}
+                >
+                  {pathname === "/login" ? "Sign Up" : "Log In"}
+                </Link>
+              )}
             </div>
           )}
         </div>

@@ -9,6 +9,7 @@ const requireAuth = require("../middleware/requireAuth");
 
 const router = express.Router();
 
+// middleware to authenticate all routes. If user is not authenticated, request will not proceed
 router.use(requireAuth);
 
 // get all countries
