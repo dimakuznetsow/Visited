@@ -9,7 +9,7 @@ const getAllCountries = async (req, res) => {
   res.status(200).json(countries);
 };
 
-// add a country
+// // add a country
 const addCountry = async (req, res) => {
   const { name } = req.body;
 
@@ -33,12 +33,18 @@ const deleteCountry = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ error: "No such country" });
   }
-  const country = await Country.findOneAndDelete({ _id: id });
 
-  if (!country) {
-    return res.status(404).json({ error: "No such country" });
+  try {
+    const country = await Country.findOneAndDelete({ _id: id });
+
+    if (!country) {
+      return res.status(404).json({ error: "No such country" });
+    }
+
+    res.status(200).json(country);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
-  res.status(200).json(country);
 };
 
 module.exports = {

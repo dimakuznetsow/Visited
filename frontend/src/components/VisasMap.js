@@ -15,9 +15,7 @@ const geoUrl =
 export default function Map({ setTooltipContent }) {
   const [country, setCountry] = useState("Blank");
   const [selectCountry, setSelectCountry] = useState(null);
-
-  const [info, setInfo] = useState(null);
-  let [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchVisas = async () => {
@@ -256,31 +254,6 @@ export default function Map({ setTooltipContent }) {
         </select>
       </div>
 
-      {/* {country !== "Blank" && selectCountry ? (
-        <div className="flex justify-center mt-2">
-          You can visit without visa:{" "}
-          {selectCountry &&
-            selectCountry.filter((entry) =>
-              [
-                "Freedom of movement",
-                "Visa not required",
-                "Visa on arrival",
-              ].includes(entry.visaRequirement)
-            ).length}{" "}
-          countries and territories.
-        </div>
-      ) : (
-        <div className="flex justify-center">
-          <Barloader
-            className="mt-2"
-            loading={loading}
-            height={3}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-        </div>
-      )} */}
-
       {loading ? (
         <div className="flex justify-center">
           <Barloader
@@ -317,12 +290,6 @@ export default function Map({ setTooltipContent }) {
         </>
       )}
 
-      {info && (
-        <div className="absolute bg-slate-800 text-white p-10 md:top-80 my-10 mx-20 rounded-lg">
-          {info}
-        </div>
-      )}
-
       <div id="map" className="block m-0">
         <ComposableMap className="m-0" width={950} height={500}>
           <Graticule stroke="#ebe8eb" strokeWidth={0.5} />
@@ -334,7 +301,7 @@ export default function Map({ setTooltipContent }) {
                 const countryColor = () => {
                   switch (d.visaRequirement) {
                     case "Freedom of movement":
-                      return "green";
+                      return "#3c8538";
                     case "Visa not required":
                     case "Visa on arrival":
                       return "#50C878";
@@ -343,7 +310,6 @@ export default function Map({ setTooltipContent }) {
                     case "Visa required":
                       return "#eb4b4b";
                     case "Admission refused":
-                      return "#333333";
                     case "Travel restricted":
                       return "#333333";
                     case "Selected":
@@ -393,11 +359,6 @@ export default function Map({ setTooltipContent }) {
                               <br />
                               {d.allowedStay && <strong>Allowed stay: </strong>}
                               {d.allowedStay}
-                              {/* <br />
-                              <br />
-                              <strong className="text-sky-500">
-                                Click for more info
-                              </strong> */}
                             </p>
                           );
                         };
@@ -406,87 +367,6 @@ export default function Map({ setTooltipContent }) {
                       onMouseLeave={() => {
                         setTooltipContent("");
                       }}
-                      // onClick={() => {
-                      //   const infoContent = () => {
-                      //     if (!d.unesco || d.unesco.length === 0) {
-                      //       return (
-                      //         <>
-                      //           <div className="text-sky-500 font-bold">
-                      //             <button
-                      //               onClick={() => setInfo(null)}
-                      //               className="bg-white rounded-lg py-1 px-3"
-                      //             >
-                      //               x
-                      //             </button>
-                      //           </div>
-                      //           <div className="m-10 text-center text-3xl font-bold">
-                      //             No data
-                      //           </div>
-                      //         </>
-                      //       );
-                      //     }
-                      //     return (
-                      //       <>
-                      //         {d.unesco && (
-                      //           <>
-                      //             <div className="absolute top-5 right-5 text-sky-500 font-bold">
-                      //               <button
-                      //                 onClick={() => setInfo(null)}
-                      //                 className="bg-white rounded-lg py-1 px-3"
-                      //               >
-                      //                 x
-                      //               </button>
-                      //             </div>
-                      //             <div className="text-center text-3xl font-bold">
-                      //               {d.country}
-                      //             </div>
-                      //             <div>
-                      //               <p className="">Capital: {d.capital}</p>
-                      //               <p className="">
-                      //                 Population:{" "}
-                      //                 {d.population.toLocaleString("il-IL")}
-                      //               </p>
-                      //               <p>
-                      //                 Languages:{" "}
-                      //                 {d.languages.map((language, index) => {
-                      //                   return (
-                      //                     <>
-                      //                       <span>{language}</span>
-                      //                       {index !== d.languages.length - 1
-                      //                         ? ", "
-                      //                         : ""}
-                      //                     </>
-                      //                   );
-                      //                 })}
-                      //               </p>
-                      //               <p className="">
-                      //                 Currencies: {d.currencies.name},{" "}
-                      //                 {d.currencies.code}
-                      //               </p>
-                      //             </div>
-                      //             <div className="flex ">
-                      //               {d.unesco &&
-                      //                 d.unesco.map((site, index) => (
-                      //                   <section
-                      //                     key={index}
-                      //                     className="border-4 border-white my-4 mx-2 rounded-lg p-4"
-                      //                   >
-                      //                     <br />
-                      //                     <p className="font-bold">
-                      //                       {site.name_en}
-                      //                     </p>
-                      //                     <br />
-                      //                     {site.short_description_en}
-                      //                   </section>
-                      //                 ))}
-                      //             </div>
-                      //           </>
-                      //         )}
-                      //       </>
-                      //     );
-                      //   };
-                      //   setInfo(infoContent);
-                      // }}
                       strokeWidth={0.5}
                       style={{
                         default: {
