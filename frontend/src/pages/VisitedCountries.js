@@ -61,7 +61,7 @@ const VisitedCountries = () => {
         "Ghana",
         "Guinea",
         "Guinea-Bissau",
-        "Côte d'Ivoire",
+        "Ivory Coast",
         "Kenya",
         "Lesotho",
         "Liberia",

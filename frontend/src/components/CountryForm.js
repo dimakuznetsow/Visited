@@ -90,7 +90,7 @@ export default function CountryForm() {
     "Ireland",
     "Israel",
     "Italy",
-    "Côte d'Ivoire",
+    "Ivory Coast",
     "Jamaica",
     "Japan",
     "Jordan",
