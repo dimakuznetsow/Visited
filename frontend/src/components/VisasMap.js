@@ -135,7 +135,7 @@ export default function Map({ setTooltipContent }) {
           <option value="Ireland">Ireland</option>
           <option value="Israel">Israel</option>
           <option value="Italy">Italy</option>
-          <option value="Ivory Coast">Ivory Coast</option>
+          <option value="Côte d'Ivoire">Côte d'Ivoire</option>
           <option value="Jamaica">Jamaica</option>
           <option value="Japan">Japan</option>
           <option value="Jordan">Jordan</option>
