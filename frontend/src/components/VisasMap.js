@@ -93,7 +93,7 @@ export default function Map({ setTooltipContent }) {
             Democratic Republic of the Congo
           </option>
           <option value="Costa Rica">Costa Rica</option>
-          <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+
           <option value="Croatia">Croatia</option>
           <option value="Cuba">Cuba</option>
           <option value="Cyprus">Cyprus</option>
@@ -136,6 +136,7 @@ export default function Map({ setTooltipContent }) {
           <option value="Ireland">Ireland</option>
           <option value="Israel">Israel</option>
           <option value="Italy">Italy</option>
+          <option value="Ivory Coast">Ivory Coast</option>
           <option value="Jamaica">Jamaica</option>
           <option value="Japan">Japan</option>
           <option value="Jordan">Jordan</option>
