@@ -29,26 +29,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             {user && (
-              <Link className="text-xl text-white font-medium" to="/">
-                {pathname === "/" ? <h1>Visited countries</h1> : null}
-              </Link>
-            )}
-            {user && (
-              <Link
-                className="text-xl text-white font-medium"
-                to="/check-for-visa"
-              >
-                {pathname === "/check-for-visa" ? (
-                  <h1>Visa requirements</h1>
-                ) : null}
+              <Link className="text-xl text-white font-medium ml-2" to="/">
+                <h1>Visited</h1>
               </Link>
             )}
             {!user && (
-              <Link
-                className="text-xl text-white font-medium ml-2"
-                to="/check-for-visa"
-              >
-                <h1>Visa requirements</h1>
+              <Link className="text-xl text-white font-medium ml-2" to="/">
+                <h1>Visited</h1>
               </Link>
             )}
           </div>
@@ -65,14 +52,9 @@ export default function Navbar() {
                 <div className="flex items-center hidden md:block">
                   <Link
                     className="text-xl text-white font-medium"
-                    to="/check-for-visa"
+                    to="/countries"
                   >
-                    {pathname === "/" ? <h1>Visa requirements</h1> : null}
-                  </Link>
-                  <Link className="text-xl text-white font-medium" to="/">
-                    {pathname === "/check-for-visa" ? (
-                      <h1>Visited countries</h1>
-                    ) : null}
+                    {pathname === "/" ? <h1>My countries</h1> : null}
                   </Link>
                 </div>
                 <div className="hidden md:block flex items-center ml-6  px-2 py-1 text-sky-600 dark:text-slate-800 bg-white rounded-md">
@@ -94,7 +76,6 @@ export default function Navbar() {
               </div>
             )}
           </nav>
-
           {pathname !== "/login" && pathname !== "/signup" && (
             <button className="md:hidden" onClick={openMenu}>
               <svg
@@ -115,14 +96,9 @@ export default function Navbar() {
                 <Link
                   className="text-xl text-white"
                   onClick={openMenu}
-                  to="/check-for-visa"
+                  to="/countries"
                 >
-                  {pathname === "/" ? <h1>Visa requirements</h1> : null}
-                </Link>
-                <Link className="text-xl text-white" onClick={openMenu} to="/">
-                  {pathname === "/check-for-visa" ? (
-                    <h1>Visited countries</h1>
-                  ) : null}
+                  {pathname === "/" ? <h1>My countries</h1> : null}
                 </Link>
               </div>
               <div className="flex items-center ml-6 px-2 py-1 text-sky-600 dark:text-slate-800 bg-white rounded-md">

@@ -18,8 +18,11 @@ function App() {
         <>
           <Navbar />
           <Routes>
-            <Route path="/check-for-visa" element={<Visas />} />
-            <Route path="/" element={user ? <VisitedCountries /> : <Visas />} />
+            <Route path="/" element={<Visas />} />
+            <Route
+              path="/countries"
+              element={user ? <VisitedCountries /> : <Visas />}
+            />
             <Route
               path="/login"
               element={!user ? <Login /> : <Navigate to="/" />}
