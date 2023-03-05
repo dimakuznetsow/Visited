@@ -284,7 +284,7 @@ export default function Map({ setTooltipContent }) {
                       "Visa not required",
                       "Visa on arrival",
                     ].includes(entry.visaRequirement)
-                  ).length}{" "}
+                  ).length - 2}{" "}
                 countries and territories.
               </div>
             )}
