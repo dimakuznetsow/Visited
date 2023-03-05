@@ -18,7 +18,7 @@ function Login() {
       <main className="md:h-screen md:bg-sky-500 md:dark:bg-slate-800 md:overflow-x-hidden">
         <div className="md:pt-20 ">
           <form
-            className="bg-white p-6 rounded-lg  w-full max-w-sm mx-auto"
+            className="bg-slate-50 p-6 rounded-lg  w-full max-w-sm mx-auto"
             onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-medium mb-5">Log in</h3>
