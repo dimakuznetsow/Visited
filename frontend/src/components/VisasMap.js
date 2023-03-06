@@ -339,7 +339,8 @@ export default function Map({ setTooltipContent }) {
                               <br />
                               <em>
                                 <strong>
-                                  {d.visaRequirement === "Admission refused"
+                                  {d.visaRequirement &&
+                                  d.visaRequirement === "Admission refused"
                                     ? "Admission refused"
                                     : d.visaRequirement === "Travel restricted"
                                     ? "Travel restricted"
