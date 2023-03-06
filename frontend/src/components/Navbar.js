@@ -118,7 +118,7 @@ export default function Navbar() {
             <div className="flex justify-end items-center w-full">
               {pathname !== "/login" && pathname !== "/signup" && (
                 <Link
-                  className="text-white rounded-md pr-2"
+                  className="text-white rounded pr-2"
                   to={pathname === "/login" ? "/signup" : "/login"}
                   onClick={openMenu}
                 >
