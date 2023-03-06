@@ -29,12 +29,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             {user && (
-              <Link className="text-xl text-white font-medium ml-2" to="/">
+              <Link className="text-xl text-white font-medium ml-2" to="/visas">
                 <h1>Visited</h1>
               </Link>
             )}
             {!user && (
-              <Link className="text-xl text-white font-medium ml-2" to="/">
+              <Link
+                className="text-xl text-white font-medium ml-2"
+                to="/visas"
+                onClick={() => localStorage.setItem("visited", true)}
+              >
                 <h1>Visited</h1>
               </Link>
             )}
@@ -54,7 +58,7 @@ export default function Navbar() {
                     className="text-xl text-white font-medium"
                     to="/countries"
                   >
-                    {pathname === "/" ? <h1>My countries</h1> : null}
+                    {pathname === "/visas" ? <h1>My countries</h1> : null}
                   </Link>
                 </div>
                 <div className="hidden md:block flex items-center ml-6  px-2 py-1 text-sky-600 dark:text-slate-800 bg-white rounded-md">
@@ -68,6 +72,7 @@ export default function Navbar() {
                 {pathname !== "/login" && pathname !== "/signup" && (
                   <Link
                     className="text-white rounded-md pr-2"
+                    onClick={() => localStorage.setItem("visited", true)}
                     to={pathname === "/login" ? "/signup" : "/login"}
                   >
                     {pathname === "/login" ? "Sign Up" : "Log In"}

@@ -1,10 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import map from "../images/map.png";
 
 function LaunchPage() {
-  const { pathname } = useLocation();
-
   return (
     <>
       <body className="bg-gray-100 h-screen w-screen overflow-x-hidden">
@@ -26,15 +24,15 @@ function LaunchPage() {
         <main className="flex mt-40  ml-10">
           <section className="flex flex-col justify-center items-center ">
             <div className="font-lato font-medium text-base leading-6 tracking-wider text-slate-800 mb-20">
-              You can easily check the visa requirements for your passport with
-              just a click of a button. No more sifting through pages of
-              information to figure out if you need a visa or not. Get the
-              information you need quickly and efficiently, so you can focus on
-              planning your trip.
+              Check the visa requirements for your passport with just a click of
+              a button. No more sifting through pages of information to figure
+              out if you need a visa or not. Get the information you need
+              quickly and efficiently, so you can focus on planning your trip.
             </div>
             <Link
               className="bg-slate-800 text-gray-100 text-xl py-3 px-8 rounded-md"
-              to="/check-for-visa"
+              to="/visas"
+              onClick={() => localStorage.setItem("visited", true)}
             >
               Visa Requirements
             </Link>
@@ -46,12 +44,14 @@ function LaunchPage() {
               map and easily keep track of your travel experiences. Sign up or
               log in now to unlock this feature and start mapping your travels.
             </div>
-            <button
+
+            <Link
               className="bg-sky-500 text-gray-100 text-xl py-3 px-8 rounded-md"
-              //   onClick={handleSignUpLogIn}
+              to="/signup"
+              onClick={() => localStorage.setItem("visited", true)}
             >
-              Sign Up / Log In
-            </button>
+              Sign Up
+            </Link>
           </section>
         </main>
       </body>
