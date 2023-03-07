@@ -93,6 +93,7 @@ export default function Map({ setTooltipContent }) {
             Democratic Republic of the Congo
           </option>
           <option value="Costa Rica">Costa Rica</option>
+
           <option value="Croatia">Croatia</option>
           <option value="Cuba">Cuba</option>
           <option value="Cyprus">Cyprus</option>
@@ -279,6 +280,7 @@ export default function Map({ setTooltipContent }) {
               <div className="flex justify-center mt-2">
                 You can visit without visa:{" "}
                 {selectCountry &&
+
                   selectCountry.filter(
                     (entry) =>
                       [
@@ -289,6 +291,7 @@ export default function Map({ setTooltipContent }) {
                       !(entry.country === "Morocco" && entry.id !== "ESH") &&
                       !(entry.country === "Somalia" && entry.id !== "-99")
                   ).length}{" "}
+
                 countries and territories.
               </div>
             )}

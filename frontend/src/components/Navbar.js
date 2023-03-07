@@ -81,7 +81,6 @@ export default function Navbar() {
               </div>
             )}
           </nav>
-
           {pathname !== "/login" && pathname !== "/signup" && (
             <button className="md:hidden" onClick={openMenu}>
               <svg
