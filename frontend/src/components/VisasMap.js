@@ -113,7 +113,6 @@ export default function Map({ setTooltipContent }) {
           <option value="Fiji">Fiji</option>
           <option value="Finland">Finland</option>
           <option value="France">France</option>
-          <option value="French Guiana">French Guiana</option>
           <option value="Gabon">Gabon</option>
           <option value="Gambia">Gambia</option>
           <option value="Georgia">Georgia</option>
@@ -268,23 +267,31 @@ export default function Map({ setTooltipContent }) {
       ) : (
         <>
           {selectCountry &&
-            selectCountry.filter((entry) =>
-              [
-                "Freedom of movement",
-                "Visa not required",
-                "Visa on arrival",
-              ].includes(entry.visaRequirement)
+            selectCountry.filter(
+              (entry) =>
+                [
+                  "Freedom of movement",
+                  "Visa not required",
+                  "Visa on arrival",
+                ].includes(entry.visaRequirement) &&
+                !(entry.country === "Morocco" && entry.id !== "ESH") && // exclude duplicate Morocco entries
+                !(entry.country === "Somalia" && entry.id !== "-99") // exclude duplicate Somalia entries
             ).length > 0 && (
               <div className="flex justify-center mt-2">
                 You can visit without visa:{" "}
                 {selectCountry &&
-                  selectCountry.filter((entry) =>
-                    [
-                      "Freedom of movement",
-                      "Visa not required",
-                      "Visa on arrival",
-                    ].includes(entry.visaRequirement)
-                  ).length - 2}{" "}
+
+                  selectCountry.filter(
+                    (entry) =>
+                      [
+                        "Freedom of movement",
+                        "Visa not required",
+                        "Visa on arrival",
+                      ].includes(entry.visaRequirement) &&
+                      !(entry.country === "Morocco" && entry.id !== "ESH") &&
+                      !(entry.country === "Somalia" && entry.id !== "-99")
+                  ).length}{" "}
+
                 countries and territories.
               </div>
             )}

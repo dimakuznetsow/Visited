@@ -103,7 +103,7 @@ export default function Navbar() {
                   onClick={openMenu}
                   to="/countries"
                 >
-                  {pathname === "/" ? <h1>My countries</h1> : null}
+                  {pathname === "/visas" ? <h1>My countries</h1> : null}
                 </Link>
               </div>
               <div className="flex items-center ml-6 px-2 py-1 text-sky-600 dark:text-slate-800 bg-white rounded-md">
@@ -124,7 +124,10 @@ export default function Navbar() {
                 <Link
                   className="text-white rounded pr-2"
                   to={pathname === "/login" ? "/signup" : "/login"}
-                  onClick={openMenu}
+                  onClick={() => {
+                    openMenu();
+                    localStorage.setItem("visited", true);
+                  }}
                 >
                   {pathname === "/login" ? "Sign Up" : "Log In"}
                 </Link>
