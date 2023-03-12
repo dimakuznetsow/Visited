@@ -7,13 +7,15 @@ import {
   Sphere,
 } from "react-simple-maps";
 import Barloader from "react-spinners/BarLoader";
+import Select from "./Select";
 import VisasDetails from "./VisasDetails";
 
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 export default function Map({ setTooltipContent }) {
-  const [country, setCountry] = useState("Blank");
+  // const [country, setCountry] = useState("Blank");
+  const [selectedValue, setSelectedValue] = useState("Blank");
   const [selectCountry, setSelectCountry] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -22,27 +24,31 @@ export default function Map({ setTooltipContent }) {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://visited-api.onrender.com/api/visas/${country}`
+          `https://visited-api.onrender.com/api/visas/${selectedValue}`
         );
         const data = await response.json();
         setSelectCountry(data.countries);
       } catch (error) {
         console.error(error);
       }
-
       setLoading(false);
     };
 
     fetchVisas();
-  }, [country]);
+  }, [selectedValue]);
+
+  const chooseCountry = (country) => {
+    setSelectedValue(country);
+  };
 
   return (
     <>
       <div className="flex justify-center">
-        <select
+        <Select chooseCountry={chooseCountry} loading={loading} />
+        {/* <select
           defaultValue={"Blank"}
           disabled={loading}
-          className="border border-sky-500 dark:border-slate-600 py-2 px-4 mt-2 rounded-lg"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           onChange={(event) => setCountry(event.target.value)}
         >
           <option value="Blank" disabled>
@@ -251,7 +257,7 @@ export default function Map({ setTooltipContent }) {
           <option value="Yemen">Yemen</option>
           <option value="Zambia">Zambia</option>
           <option value="Zimbabwe">Zimbabwe</option>
-        </select>
+        </select> */}
       </div>
 
       {loading ? (
@@ -280,7 +286,6 @@ export default function Map({ setTooltipContent }) {
               <div className="flex justify-center mt-2">
                 You can visit without visa:{" "}
                 {selectCountry &&
-
                   selectCountry.filter(
                     (entry) =>
                       [
@@ -291,7 +296,6 @@ export default function Map({ setTooltipContent }) {
                       !(entry.country === "Morocco" && entry.id !== "ESH") &&
                       !(entry.country === "Somalia" && entry.id !== "-99")
                   ).length}{" "}
-
                 countries and territories.
               </div>
             )}
@@ -398,8 +402,8 @@ export default function Map({ setTooltipContent }) {
         </ComposableMap>
       </div>
 
-      {selectCountry && country !== "Blank" && (
-        <VisasDetails country={country} selectCountry={selectCountry} />
+      {selectCountry && selectedValue !== "Blank" && (
+        <VisasDetails country={selectedValue} selectCountry={selectCountry} />
       )}
     </>
   );
