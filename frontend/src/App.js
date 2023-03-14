@@ -10,6 +10,7 @@ import VisitedCountries from "./pages/VisitedCountries";
 import LaunchPage from "./pages/LaunchPage";
 
 import "./index.css";
+import Footer from "./components/Footer";
 
 function App() {
   const { user } = useAuthContext();
@@ -46,6 +47,7 @@ function App() {
               element={!user ? <Signup /> : <Navigate to="/visas" />}
             />
           </Routes>
+          <Footer />
         </>
       </BrowserRouter>
     </>

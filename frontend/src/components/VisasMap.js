@@ -14,7 +14,6 @@ const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 export default function Map({ setTooltipContent }) {
-  // const [country, setCountry] = useState("Blank");
   const [selectedValue, setSelectedValue] = useState("Blank");
   const [selectCountry, setSelectCountry] = useState(null);
   const [loading, setLoading] = useState(true);
