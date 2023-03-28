@@ -303,7 +303,7 @@ const VisitedCountries = () => {
 
   return (
     <>
-      <div className="">
+      <div className="mb-6">
         <CountryForm content={content} />
 
         <Map setTooltipContent={setContent} countries={countries} />
