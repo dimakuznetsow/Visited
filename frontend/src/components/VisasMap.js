@@ -282,20 +282,21 @@ export default function Map({ setTooltipContent }) {
                 !(entry.country === "Morocco" && entry.id !== "ESH") && // exclude duplicate Morocco entries
                 !(entry.country === "Somalia" && entry.id !== "-99") // exclude duplicate Somalia entries
             ).length > 0 && (
-              <div className="flex justify-center mt-2">
-                You can visit without visa:{" "}
-                {selectCountry &&
-                  selectCountry.filter(
-                    (entry) =>
-                      [
-                        "Freedom of movement",
-                        "Visa not required",
-                        "Visa on arrival",
-                      ].includes(entry.visaRequirement) &&
-                      !(entry.country === "Morocco" && entry.id !== "ESH") &&
-                      !(entry.country === "Somalia" && entry.id !== "-99")
-                  ).length}{" "}
-                countries and territories.
+              <div className="flex justify-center mt-2 text-center">
+                Visa-free countries and territories:{" "}
+                <strong className="ml-1">
+                  {selectCountry &&
+                    selectCountry.filter(
+                      (entry) =>
+                        [
+                          "Freedom of movement",
+                          "Visa not required",
+                          "Visa on arrival",
+                        ].includes(entry.visaRequirement) &&
+                        !(entry.country === "Morocco" && entry.id !== "ESH") &&
+                        !(entry.country === "Somalia" && entry.id !== "-99")
+                    ).length}{" "}
+                </strong>
               </div>
             )}
         </>
