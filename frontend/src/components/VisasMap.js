@@ -302,7 +302,7 @@ export default function Map({ setTooltipContent }) {
       )}
 
       <div id="map" className="block m-0">
-        <ComposableMap className="m-0" width={950} height={500}>
+        <ComposableMap className="mb-8" width={950} height={500}>
           <Graticule stroke="#ebe8eb" strokeWidth={0.5} />
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
