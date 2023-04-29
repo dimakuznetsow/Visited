@@ -4,7 +4,7 @@ import "react-tooltip/dist/react-tooltip.css";
 
 import CountryForm from "../components/CountryForm";
 import CountryDetails from "../components/CountryDetails";
-import Map from "../components/VisitedMap";
+import Map from "../components/maps/VisitedMap";
 
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useCountriesContext } from "../hooks/useCountriesContext";

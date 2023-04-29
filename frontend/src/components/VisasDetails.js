@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-function VisasDetails({
-  country,
-
-  selectCountry,
-}) {
+function VisasDetails({ country, selectCountry }) {
   const [activeSection, setActiveSection] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = (index) => {

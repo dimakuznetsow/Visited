@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-import { useLogout } from "../hooks/useLogout";
-import { useAuthContext } from "../hooks/useAuthContext";
-import { DarkModeContext } from "../context/DarkModeContext";
+import { useLogout } from "../../hooks/useLogout";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { DarkModeContext } from "../../context/DarkModeContext";
 import { useContext, useState } from "react";
 
 export default function Navbar() {

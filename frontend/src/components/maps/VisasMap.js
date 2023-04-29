@@ -7,8 +7,9 @@ import {
   Sphere,
 } from "react-simple-maps";
 import Barloader from "react-spinners/BarLoader";
-import Select from "./Select";
-import VisasDetails from "./VisasDetails";
+import Select from "../../components/Select";
+import NewVisaDetails from "../NewVisaDetails";
+// import VisasDetails from "../VisasDetails";
 
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
@@ -265,7 +266,6 @@ export default function Map({ setTooltipContent }) {
             className="mt-2"
             loading={loading}
             height={3}
-            aria-label="Loading Spinner"
             data-testid="loader"
           />
         </div>
@@ -403,7 +403,7 @@ export default function Map({ setTooltipContent }) {
       </div>
 
       {selectCountry && selectedValue !== "Blank" && (
-        <VisasDetails country={selectedValue} selectCountry={selectCountry} />
+        <NewVisaDetails country={selectedValue} selectCountry={selectCountry} />
       )}
     </>
   );

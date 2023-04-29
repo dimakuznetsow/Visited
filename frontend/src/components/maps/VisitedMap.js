@@ -7,7 +7,7 @@ import {
   Sphere,
 } from "react-simple-maps";
 
-import { DarkModeContext } from "../context/DarkModeContext";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 const geoUrl =
   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
@@ -27,8 +27,8 @@ export default function Map({ setTooltipContent, countries }) {
 
   return (
     <>
-      <div id="map" className="">
-        <ComposableMap className="" width={950} height={500}>
+      <div id="map">
+        <ComposableMap width={950} height={500}>
           <Graticule stroke="#ebe8eb" strokeWidth={0.5} />
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
