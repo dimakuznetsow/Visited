@@ -46,6 +46,7 @@ export default function CountryForm() {
     "Colombia",
     "Comoros",
     "Costa Rica",
+    "Côte d'Ivoire",
     "Croatia",
     "Cuba",
     "Cyprus",

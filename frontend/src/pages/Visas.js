@@ -9,7 +9,6 @@ function Visas() {
   return (
     <>
       <Map setTooltipContent={setContent} />
-
       <Tooltip
         className="px-3 py-3 bg-slate-800"
         anchorId="map"

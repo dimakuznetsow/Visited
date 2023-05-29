@@ -139,7 +139,7 @@ function NewVisaDetails({ country, selectCountry }) {
       ],
     ],
     [
-      "EAST AND SOUTH ASIA",
+      "EAST AND SOUTHEAST ASIA",
       [
         "Brunei",
         "Myanmar",
@@ -281,7 +281,19 @@ function NewVisaDetails({ country, selectCountry }) {
       {country !== "NNN" && (
         <>
           <div className="bg-sky-400 dark:bg-slate-700 text-white font-bold text-2xl pl-4 md:pl-6 py-6">
-            Visa-free access destinations:
+            Visa-free access destinations <span>(</span>
+            {selectCountry &&
+              selectCountry.filter(
+                (entry) =>
+                  [
+                    "Freedom of movement",
+                    "Visa not required",
+                    "Visa on arrival",
+                  ].includes(entry.visaRequirement) &&
+                  !(entry.country === "Morocco" && entry.id !== "ESH") && // exclude duplicate Morocco entries
+                  !(entry.country === "Somalia" && entry.id !== "-99") // exclude duplicate Somalia entries
+              ).length}
+            <span> of 200):</span>
           </div>
 
           <div className="bg-sky-400 dark:bg-slate-700 text-white pl-4 pr-2 pb-10 md:grid grid-cols-2 text-lg">
@@ -298,7 +310,7 @@ function NewVisaDetails({ country, selectCountry }) {
                         <h1 className="font-bold pb-2 md:text-right md:mr-8 text-lg">
                           {region}:
                         </h1>
-                        <div className=" font-light md:grid grid-cols-2 pb-4 md:pb-8 pt-2 md:pt-8 md:ml-0 items-center">
+                        <div className="font-light md:grid grid-cols-2 pb-4 md:pb-8 pt-2 md:pt-8 md:ml-0 items-center">
                           {uniqueCountries.map((country, index) => (
                             <ul key={index + 1}>
                               <li className="pb-6 md:w-52 flex items-center text-md">

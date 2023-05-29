@@ -9,6 +9,7 @@ import {
 import Barloader from "react-spinners/BarLoader";
 import Select from "../../components/Select";
 import NewVisaDetails from "../NewVisaDetails";
+import { IoArrowDown } from "react-icons/io5";
 // import VisasDetails from "../VisasDetails";
 
 const geoUrl =
@@ -18,6 +19,7 @@ export default function Map({ setTooltipContent }) {
   const [selectedValue, setSelectedValue] = useState("Blank");
   const [selectCountry, setSelectCountry] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showDiv, setShowDiv] = useState(true);
 
   useEffect(() => {
     const fetchVisas = async () => {
@@ -36,6 +38,22 @@ export default function Map({ setTooltipContent }) {
 
     fetchVisas();
   }, [selectedValue]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowDiv(false); // Hide the div when the user starts scrolling
+      } else {
+        setShowDiv(true); // Show the div when the user scrolls back to the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const chooseCountry = (country) => {
     setSelectedValue(country);
@@ -271,7 +289,7 @@ export default function Map({ setTooltipContent }) {
         </div>
       ) : (
         <>
-          {selectCountry &&
+          {/* {selectCountry &&
             selectCountry.filter(
               (entry) =>
                 [
@@ -298,7 +316,7 @@ export default function Map({ setTooltipContent }) {
                     ).length}{" "}
                 </strong>
               </div>
-            )}
+            )} */}
         </>
       )}
 
@@ -400,6 +418,14 @@ export default function Map({ setTooltipContent }) {
           </Geographies>
           <Sphere stroke="#ebe8eb" strokeWidth={0.5} />
         </ComposableMap>
+        {selectedValue && selectedValue !== "Blank" && showDiv && (
+          <div className="hidden md:block absolute top-[600px] left-10 z-10">
+            <span className="absolute top-0 left-0 w-full h-full bg-teal-600 rounded-customRounded2"></span>
+            <div className="relative p-6 text-center text-white">
+              <IoArrowDown size={50} />
+            </div>
+          </div>
+        )}
       </div>
 
       {selectCountry && selectedValue !== "Blank" && (
