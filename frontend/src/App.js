@@ -28,7 +28,7 @@ function App() {
     <>
       <BrowserRouter>
         <>
-          <div className="relative min-h-screen flex flex-col">
+          <div className="relative min-h-screen flex flex-col ">
             <Navbar />
             <Routes>
               <Route

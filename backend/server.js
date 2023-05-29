@@ -27,7 +27,6 @@ app.use("/api/visas/", visasRoutes);
 
 // connect to db
 
-mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

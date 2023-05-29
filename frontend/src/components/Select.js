@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -87,7 +87,6 @@ function Select({ chooseCountry, loading }) {
     "Ireland",
     "Israel",
     "Italy",
-
     "Jamaica",
     "Japan",
     "Jordan",
@@ -204,9 +203,32 @@ function Select({ chooseCountry, loading }) {
   const [inputValue, setInputValue] = useState("");
   const [selected, setSelected] = useState("");
   const [open, setOpen] = useState(false);
+  const [isDivVisible, setDivVisible] = useState(true);
+
+  const handleSelectChange = () => {
+    setDivVisible(false);
+    localStorage.setItem("isDivVisible", "false");
+  };
+
+  useEffect(() => {
+    const storedIsDivVisible = localStorage.getItem("isDivVisible");
+    if (storedIsDivVisible === "false") {
+      setDivVisible(false);
+    }
+  }, []);
 
   return (
     <>
+      {isDivVisible && (
+        <div className="hidden md:flex relative -mt-10 z-10 w-52 justify-center items-center">
+          <span className="absolute top-0 left-0 w-full h-full bg-purple-600 rounded-customRounded1"></span>
+          <span className="absolute top-0 left-0 w-full h-full rounded-customRounded1"></span>
+          <div className="relative p-4 text-center text-white">
+            <h2 className="text-2xl font-bold">Hello!</h2>
+            <p>Choose a country from dropdown</p>
+          </div>
+        </div>
+      )}
       <div className="relative w-full md:w-1/4 font-medium mt-2 mx-4">
         <div
           onClick={() => {
@@ -214,11 +236,12 @@ function Select({ chooseCountry, loading }) {
               return;
             }
             setOpen(!open);
+            handleSelectChange();
           }}
           className={`
           ${
             open
-              ? "bg-white w-full p-2 flex items-center justify-between rounded-t border border-sky-500  dark:border-slate-800 rounded-t"
+              ? "bg-white w-full p-2 flex items-center justify-between border border-sky-500  dark:border-slate-800 rounded-t"
               : "bg-white w-full p-2 flex items-center justify-between rounded border border-sky-500  dark:border-slate-800"
           }`}
         >
