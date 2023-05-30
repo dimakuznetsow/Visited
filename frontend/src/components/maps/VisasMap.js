@@ -42,9 +42,9 @@ export default function Map({ setTooltipContent }) {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setShowDiv(false); // Hide the div when the user starts scrolling
+        setShowDiv(false); // hide the div when the user starts scrolling
       } else {
-        setShowDiv(true); // Show the div when the user scrolls back to the top
+        setShowDiv(true); // show the div when the user scrolls back to the top
       }
     };
 
@@ -418,11 +418,16 @@ export default function Map({ setTooltipContent }) {
           </Geographies>
           <Sphere stroke="#ebe8eb" strokeWidth={0.5} />
         </ComposableMap>
+
         {selectedValue && selectedValue !== "Blank" && showDiv && (
           <div className="hidden md:block absolute top-[600px] left-10 z-10">
-            <span className="absolute top-0 left-0 w-full h-full bg-teal-600 rounded-customRounded2"></span>
+            <span className="absolute top-0 left-0 w-48 h-20 bg-teal-600 rounded-customRounded2"></span>
             <div className="relative p-6 text-center text-white">
-              <IoArrowDown size={50} />
+              {loading ? (
+                <span className="text-2xl ml-3 mt-2">Loading ...</span>
+              ) : (
+                <span className="text-2xl ml-3 mt-2">Scroll down</span>
+              )}
             </div>
           </div>
         )}
