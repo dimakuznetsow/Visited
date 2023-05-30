@@ -1,10 +1,15 @@
 import React from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 function Footer() {
   return (
     <footer className="absolute w-full flex bottom-0 h-12 justify-between items-center bg-sky-500 dark:bg-slate-800 px-4">
-      <div className="text-white">© Dmitry Kuznetsov 2023</div>
+      <div className="flex text-white items-center gap-4">
+        <div className="">© Dmitry Kuznetsov 2023</div>
+        <a href="mailto:d.kuznetsov.fullstack@gmail.com?subject=Visa requirements issues">
+          <AiFillMail size={20} />
+        </a>
+      </div>
       <nav className="flex text-white">
         <a
           href="https://github.com/dimakuznetsow"

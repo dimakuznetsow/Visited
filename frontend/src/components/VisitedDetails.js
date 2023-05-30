@@ -68,7 +68,7 @@ function VisitedDetails() {
         "Namibia",
         "Niger",
         "Nigeria",
-        "Republic of Congo",
+        "Republic of the Congo",
         "Rwanda",
         "Sao Tome and Principe",
         "Senegal",
@@ -78,7 +78,7 @@ function VisitedDetails() {
         "South Africa",
         "South Sudan",
         "Sudan",
-        "Tanzania",
+        "United Republic of Tanzania",
         "Togo",
         "Tunisia",
         "Uganda",
@@ -169,7 +169,7 @@ function VisitedDetails() {
         "Singapore",
         "South Korea",
         "Thailand",
-        "Timor-Leste",
+        "East Timor",
         "Vietnam",
       ].includes(country.name)
     );
