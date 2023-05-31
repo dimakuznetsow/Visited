@@ -433,7 +433,7 @@ export default function Map({ setTooltipContent }) {
         )}
       </div>
 
-      {selectCountry && selectedValue !== "Blank" && (
+      {selectCountry && selectedValue !== "Blank" && !loading && (
         <NewVisaDetails country={selectedValue} selectCountry={selectCountry} />
       )}
     </>
