@@ -39,21 +39,21 @@ export default function Map({ setTooltipContent }) {
     fetchVisas();
   }, [selectedValue]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowDiv(false); // hide the div when the user starts scrolling
-      } else {
-        setShowDiv(true); // show the div when the user scrolls back to the top
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setShowDiv(false); // hide the div when the user starts scrolling
+  //     } else {
+  //       setShowDiv(true); // show the div when the user scrolls back to the top
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const chooseCountry = (country) => {
     setSelectedValue(country);
@@ -419,7 +419,7 @@ export default function Map({ setTooltipContent }) {
           <Sphere stroke="#ebe8eb" strokeWidth={0.5} />
         </ComposableMap>
 
-        {selectedValue && selectedValue !== "Blank" && showDiv && (
+        {/* {selectedValue && selectedValue !== "Blank" && showDiv && (
           <div className="hidden md:block absolute top-[600px] left-10 z-10">
             <span className="absolute top-0 left-0 w-48 h-20 bg-teal-600 rounded-customRounded2"></span>
             <div className="relative p-6 text-center text-white">
@@ -430,7 +430,7 @@ export default function Map({ setTooltipContent }) {
               )}
             </div>
           </div>
-        )}
+        )} */}
       </div>
 
       {selectCountry && selectedValue !== "Blank" && !loading && (

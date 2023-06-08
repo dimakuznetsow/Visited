@@ -204,6 +204,7 @@ function Select({ chooseCountry, loading }) {
   const [selected, setSelected] = useState("");
   const [open, setOpen] = useState(false);
   const [isDivVisible, setDivVisible] = useState(true);
+  const [showDiv, setShowDiv] = useState(true);
 
   const handleSelectChange = () => {
     setDivVisible(false);
@@ -217,6 +218,22 @@ function Select({ chooseCountry, loading }) {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowDiv(false); // hide the div when the user starts scrolling
+      } else {
+        setShowDiv(true); // show the div when the user scrolls back to the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {isDivVisible && (
@@ -226,6 +243,19 @@ function Select({ chooseCountry, loading }) {
           <div className="relative p-4 text-center text-white">
             <h2 className="text-2xl font-bold">Hello!</h2>
             <p>Choose a country from dropdown</p>
+          </div>
+        </div>
+      )}
+      {selected && selected !== "Blank" && showDiv && (
+        <div className="hidden md:flex relative -mt-10 z-10 w-52 justify-center items-center">
+          <span className="absolute top-0 left-0 w-full h-full bg-purple-600 rounded-customRounded1"></span>
+          <span className="absolute top-0 left-0 w-full h-full rounded-customRounded1"></span>
+          <div className="relative p-4 text-center text-white">
+            {loading ? (
+              <span className="text-2xl ml-3 mt-2">Loading ...</span>
+            ) : (
+              <span className="text-2xl ml-3 mt-2">Scroll down</span>
+            )}
           </div>
         </div>
       )}
