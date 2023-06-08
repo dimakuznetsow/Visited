@@ -310,10 +310,10 @@ function NewVisaDetails({ country, selectCountry }) {
                         <h1 className="font-bold pb-2 md:text-right md:mr-8 text-lg">
                           {region}:
                         </h1>
-                        <div className="font-light md:grid grid-cols-2 pb-4 md:pb-8 pt-2 md:pt-8 md:ml-0 items-center">
+                        <div className="font-light md:grid grid-cols-2 pb-4 md:pb-8 pt-2 md:pt-8 md:ml-0 2xl:ml-80 2xl:mr-80 items-center">
                           {uniqueCountries.map((country, index) => (
                             <ul key={index + 1}>
-                              <li className="pb-6 md:w-52 flex items-center text-md">
+                              <li className="pb-6 md:w-52 2xl:w-full flex items-center text-md">
                                 <img
                                   className="mr-4"
                                   srcSet={`https://hatscripts.github.io/circle-flags/flags/${
