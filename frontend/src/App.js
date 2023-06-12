@@ -27,31 +27,30 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <>
-          <div className="relative min-h-screen flex flex-col ">
-            <Navbar />
-            <Routes>
-              <Route
-                path="/"
-                element={!visitedBefore ? <LaunchPage /> : <Visas />}
-              />
-              <Route path="/visas" element={<Visas />} />
-              <Route
-                path="/countries"
-                element={user ? <VisitedCountries /> : <Visas />}
-              />
-              <Route
-                path="/login"
-                element={!user ? <Login /> : <Navigate to="/visas" />}
-              />
-              <Route
-                path="/signup"
-                element={!user ? <Signup /> : <Navigate to="/visas" />}
-              />
-            </Routes>
-            <Footer />
-          </div>
-        </>
+        <div className="relative min-h-screen flex flex-col">
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={!visitedBefore ? <LaunchPage /> : <Visas />}
+            />
+            <Route path="/visas" element={<Visas />} />
+            <Route
+              path="/countries"
+              element={user ? <VisitedCountries /> : <Visas />}
+            />
+            <Route
+              path="/login"
+              element={!user ? <Login /> : <Navigate to="/visas" />}
+            />
+            <Route
+              path="/signup"
+              element={!user ? <Signup /> : <Navigate to="/visas" />}
+            />
+          </Routes>
+          {window.location.pathname !== "/" &&
+            window.location.pathname !== "/home" && <Footer />}
+        </div>
       </BrowserRouter>
     </>
   );
