@@ -11,9 +11,10 @@ import Select from "../../components/Select";
 import NewVisaDetails from "../NewVisaDetails";
 import { IoArrowDown } from "react-icons/io5";
 // import VisasDetails from "../VisasDetails";
+import geoUrl from "../../countriesMap.json";
 
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
+// const geoUrl =
+//   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 export default function Map({ setTooltipContent }) {
   const [selectedValue, setSelectedValue] = useState("Blank");

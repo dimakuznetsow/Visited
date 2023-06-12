@@ -6,11 +6,12 @@ import {
   Graticule,
   Sphere,
 } from "react-simple-maps";
+import geoUrl from "../../countriesMap.json";
 
 import { DarkModeContext } from "../../context/DarkModeContext";
 
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
+// const geoUrl =
+//   "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
 export default function Map({ setTooltipContent, countries }) {
   const { isDarkMode } = useContext(DarkModeContext);
