@@ -1071,7 +1071,7 @@
             "type": "Polygon",
             "arcs": [[-83, -483, -451, -491, -88, 649, -355, 650, -364, -574]],
             "id": "SRB",
-            "properties": { "name": "Serbia" }
+            "properties": { "name": "Republic of Serbia" }
           },
           {
             "type": "Polygon",
@@ -1192,7 +1192,7 @@
               ]
             ],
             "id": "TZA",
-            "properties": { "name": "Tanzania" }
+            "properties": { "name": "United Republic of Tanzania" }
           },
           {
             "type": "Polygon",
@@ -1246,7 +1246,7 @@
               [[-144, 702, -142, 703]]
             ],
             "id": "USA",
-            "properties": { "name": "United States" }
+            "properties": { "name": "United States of America" }
           },
           {
             "type": "Polygon",
