@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
 
@@ -17,7 +17,7 @@ function App() {
   const { user } = useAuthContext();
   const [visitedBefore, setVisitedBefore] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const visited = localStorage.getItem("visited");
     if (visited) {
       setVisitedBefore(true);

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useLayoutEffect, useState } from "react";
 
 export const DarkModeContext = createContext();
 
@@ -7,7 +7,7 @@ export const DarkModeProvider = ({ children }) => {
     localStorage.getItem("isDarkMode") === "true"
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const html = document.querySelector("html");
 
     if (isDarkMode) {

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useLayoutEffect, useReducer } from "react";
 
 export const AuthContext = createContext();
 
@@ -18,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
     user: null,
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
 
     if (user) {
