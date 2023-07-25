@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -211,7 +211,7 @@ function Select({ chooseCountry, loading }) {
     localStorage.setItem("isDivVisible", "false");
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const storedIsDivVisible = localStorage.getItem("isDivVisible");
     if (storedIsDivVisible === "false") {
       setDivVisible(false);
